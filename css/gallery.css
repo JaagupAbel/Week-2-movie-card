@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+
+.container {
+    width: 900px;
+    height: 900px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 595px 300px;
+    gap: 5px;
+}
+
+.container > div {
+    width: 100%;
+    height: 100%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Matthew {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.Anne {
+    grid-column: 3/5;
+    grid-row: 1/2
+}
+
+@media (max-width: 568px) {
+    body{
+        background-color: #000;
+    }
+
+    .container{
+        width: auto;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+        "Matthew"
+        "Anne"
+        "Casey"
+        "Ellen"
+        "Jessica"
+        "John"
+        ;
+        }
+    .Matthew {
+        grid-area: Matthew;
+    }
+    .Anne {
+        grid-area: Anne;
+    }
+    .Casey {
+        grid-area: Casey;
+    }
+    .Ellen {
+        grid-area: Ellen;
+    }
+    .Jessica {
+        grid-area: Jessica;
+    }
+    .John {
+        grid-area: John;
+    }
+}
